@@ -1,0 +1,119 @@
+<!--
+Page Title - The How It Works page
+
+URL of page - https://web150b01u03.hcoding.net/publish/HowItWorks.html
+
+Project Requirement - Multimedia, which can be found beside the block
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="final.css">
+<!--
+    Chukwuemeka Ihenacho
+    Web 150, Final Project
+    12April2023
+-->
+<title>How It Works</title>
+<meta charset="utf-8">
+</head>
+<body>
+    <header>
+        <h1>Code Crafters</h1>
+    </header>
+    <nav>
+        <div class="topnav">
+            <a href="index.html">Home</a> 
+            <a href="HowItWorks.html">How It Works</a>   
+            <a href="Testimonials.html">Testimonials</a>
+            <a href="services.html">Services</a>
+            <a href="AboutUs.html">About Us</a>
+            <a href="Sign%20Up.html">Sign Up</a>
+            <a href="Log%20In.html">Log In</a>
+        </div>
+    </nav>
+    
+    <div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="images/Gallery/pexels-christina-morillo-1181263.jpg" style="width:100%">
+  <div class="text">How</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="images/Gallery/pexels-christina-morillo-1181271.jpg" style="width:100%">
+  <div class="text">It</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="images/Gallery/pexels-christina-morillo-1181359.jpg" style="width:100%">
+  <div class="text">Works</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+    
+    <div class="container">
+      <div class="block"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dictum metus sed nunc mollis sagittis. Morbi iaculis porta aliquet. Sed vehicula lectus justo, eget ullamcorper nisi feugiat vel. Duis a sem dignissim, rutrum risus eu, sollicitudin erat. Integer eget urna eget quam sodales aliquet et aliquam ligula. Quisque luctus tellus id dapibus rutrum. Morbi sit amet pellentesque tortor. Duis a justo id enim hendrerit rhoncus. Donec vitae fermentum quam. Morbi iaculis, felis ac volutpat tincidunt, lectus lectus porta elit, viverra luctus nisi urna vel purus. Nulla ac faucibus dolor.
+          <br><br>
+        Donec egestas imperdiet molestie. Suspendisse potenti. Pellentesque aliquam leo orci, vel convallis odio porttitor eget. Donec ut mollis est. Maecenas sit amet suscipit nibh. Sed sem neque, rutrum quis diam quis, tincidunt posuere nisi. Donec ultricies metus non augue semper, eu tincidunt augue laoreet. Donec tincidunt nibh sed lectus mattis volutpat. Sed lectus massa, facilisis ut enim et, hendrerit viverra nunc. Aliquam eleifend pharetra pulvinar. Duis a bibendum leo, a placerat ipsum. Aliquam erat volutpat.
+          <br><br>
+        
+          <br><br>
+        Of course if you wish to learn to create a website yourself you can consult the video on the right.</p></div>
+        <iframe width="853" height="480" src="https://www.youtube.com/embed/G3e-cpL7ofc" title="HTML &amp; CSS Full Course - Beginner to Pro" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="float: right"></iframe>
+    </div>
+    
+    
+    
+    <div id="rcorners3">
+        <footer>
+            1200 W Algonquin Rd, Palatine, <br>
+            IL 60067<br>
+            Call:(847) 925-6000<br>
+            Faculty/Staff Directory
+        </footer>
+    </div>
+</body>
